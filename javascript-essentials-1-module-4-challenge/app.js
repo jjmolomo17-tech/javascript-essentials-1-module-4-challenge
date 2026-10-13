@@ -220,9 +220,9 @@ console.log(`Name: ${biggestSpender.name}`);
 console.log(`Amount Spent: R${biggestSpender.spend}`);
 console.log("Reward: Backstage Upgrade");
 
-// =====================================================
+// ====================================================
 // CHALLENGE 10 - VENUE CAPACITY
-// =====================================================
+// ====================================================
 
 console.log("\n===== CHALLENGE 10: VENUE CAPACITY =====");
 
