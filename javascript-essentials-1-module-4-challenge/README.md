@@ -7,7 +7,7 @@
 **Name:** Joy Molomo  
 **Email:** jjmolomo17@gmail.com
 
----
+
 
 ## Project Overview
 
@@ -15,7 +15,7 @@ The Festival Access & Crowd Control System is a JavaScript application developed
 
 The system uses JavaScript control-flow concepts to make decisions based on attendee information such as age, ticket validity, ticket type, and spending amount.
 
----
+
 
 ## Objectives
 
@@ -34,7 +34,7 @@ This project demonstrates how JavaScript can be used to:
 - Display a closing-time countdown
 - Operate a festival control dashboard
 
----
+
 
 ## JavaScript Concepts Used
 
@@ -53,9 +53,6 @@ This project demonstrates how JavaScript can be used to:
 - break
 - continue
 
----
-
-## Challenges Completed
 
 ### Challenge 1: View the Queue
 Display all attendees and their information using a `for...of` loop.
@@ -75,7 +72,7 @@ Search for a specific attendee and stop when found using break.
 ### Challenge 6: Security Fast Lane
 Skip attendees without valid tickets using continue.
 
- ### Challenge 7: Food Voucher Rewards
+### Challenge 7: Food Voucher Rewards
 Award food vouchers based on spending levels.
 
 ### Challenge 8: Festival Statistics
@@ -129,7 +126,7 @@ Operate the festival dashboard
 
 The system is designed to automatically adapt if attendees are added, removed, or modified in the dataset.
 
-## Submission Questions
+### Submission Questions
 
 1. Why did you use && for festival entry?
 
