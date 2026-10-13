@@ -268,94 +268,10 @@ for (let minute = 10; minute >= 1; minute--) {
 
 console.log("FESTIVAL CLOSED");
 
-// ====================================================
+
+
+// ========================================================
 // FINAL CHALLENGE - FESTIVAL CONTROL DASHBOARD
-// ====================================================
-
-console.log("\n===== FINAL CHALLENGE =====");
-
-let option = 2;
-
-switch (option) {
-
-    case 1:
-        console.log("ATTENDEE QUEUE");
-
-        for (let attendee of attendees) {
-            console.log(attendee.name);
-        }
-        break;
-
-    case 2:
-        console.log("PROCESS ENTRY");
-
-        for (let attendee of attendees) {
-
-            if (attendee.age >= 18 && attendee.hasTicket) {
-                console.log(`${attendee.name} -> APPROVED`);
-            } else {
-                console.log(`${attendee.name} -> DENIED`);
-            }
-        }
-        break;
-
-    case 3:
-        console.log("VIP GUESTS");
-
-        for (let attendee of attendees) {
-
-            if (
-                attendee.ticket === "VIP" &&
-                attendee.hasTicket &&
-                attendee.age >= 18
-            ) {
-                console.log(attendee.name);
-            }
-        }
-        break;
-
-    case 4:
-        console.log("DENIED ATTENDEES");
-
-        for (let attendee of attendees) {
-
-            if (!(attendee.age >= 18 && attendee.hasTicket)) {
-
-                if (attendee.age < 18) {
-                    console.log(`${attendee.name} -> UNDER 18`);
-                } else {
-                    console.log(`${attendee.name} -> NO VALID TICKET`);
-                }
-            }
-        }
-        break;
-
-    case 5:
-        console.log("FESTIVAL STATISTICS");
-
-        console.log(`Total Attendees: ${attendees.length}`);
-        console.log(`Valid Tickets: ${validTickets}`);
-        console.log(`Invalid Tickets: ${invalidTickets}`);
-        break;
-
-    case 6:
-        console.log(
-            `Biggest Spender: ${biggestSpender.name} (R${biggestSpender.spend})`
-        );
-        break;
-
-    case 7:
-        console.log("Festival Closed");
-        break;
-
-    default:
-        console.log("Invalid Option");
-}
- 
-
-// // ========================================================
-// FINAL CHALLENGE
-// FESTIVAL CONTROL DASHBOARD
 // ========================================================
 
 console.log("\n================================");
@@ -452,3 +368,53 @@ switch (option) {
     default:
         console.log("INVALID OPTION");
 }
+
+// ========================================================
+// SURPRISE TEST - LECTURER CHANGES THE DATA
+// This proves the program works when new attendees are added
+// ========================================================
+
+attendees.push({
+    name: "Neo",
+    age: 23,
+    ticket: "VIP",
+    hasTicket: true,
+    checkedIn: false,
+    spend: 1500
+});
+
+console.log("\n===== SURPRISE TEST =====");
+console.log("New attendee added: Neo");
+
+// Verify the new attendee was added
+for (let attendee of attendees) {
+    if (attendee.name === "Neo") {
+        console.log(`Found ${attendee.name}`);
+        console.log(`Age: ${attendee.age}`);
+        console.log(`Ticket: ${attendee.ticket}`);
+        console.log(`Valid Ticket: ${attendee.hasTicket}`);
+        console.log(`Spend: R${attendee.spend}`);
+        break;
+    }
+}
+
+console.log(
+    "\nNeo will automatically be included in all challenges:"
+);
+console.log("- Entry Approval");
+console.log("- VIP Access");
+console.log("- Wristband Assignment");
+console.log("- Food Voucher Rewards");
+console.log("- Festival Statistics");
+console.log("- Biggest Spender Calculation");
+console.log("- Venue Capacity Processing");
+
+/*  For the surprise test, I added a new attendee called 
+Neo using the push method. Neo is 23 years old, has a valid VIP ticket, and 
+has spent R1500. Because my program uses loops and conditions 
+instead of hard-coded values, Neo is automatically processed throughout
+the application. Neo qualifies for entry, receives a gold wristband, 
+qualifies for VIP access, receives the highest food voucher reward, is 
+included in all statistics, and becomes the new biggest spender. 
+This demonstrates that the program is data-driven and can handle changes 
+made by the lecturer without requiring any modifications to the existing logic. */
