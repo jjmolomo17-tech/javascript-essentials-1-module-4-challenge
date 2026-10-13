@@ -351,3 +351,104 @@ switch (option) {
     default:
         console.log("Invalid Option");
 }
+ 
+
+// // ========================================================
+// FINAL CHALLENGE
+// FESTIVAL CONTROL DASHBOARD
+// ========================================================
+
+console.log("\n================================");
+console.log("      FESTIVAL CONTROL");
+console.log("================================");
+console.log("1 - View Attendee Queue");
+console.log("2 - Process Entry");
+console.log("3 - View VIP Guests");
+console.log("4 - View Denied Attendees");
+console.log("5 - View Festival Statistics");
+console.log("6 - Find Biggest Spender");
+console.log("7 - Close Festival");
+
+let option = 2;
+
+switch (option) {
+
+    case 1:
+        console.log("\nATTENDEE QUEUE");
+
+        for (let attendee of attendees) {
+            console.log(
+                `${attendee.name} | Age: ${attendee.age} | Ticket: ${attendee.ticket}`
+            );
+        }
+        break;
+
+    case 2:
+        console.log("\nPROCESS ENTRY");
+
+        for (let attendee of attendees) {
+
+            if (attendee.age >= 18 && attendee.hasTicket) {
+                console.log(`${attendee.name} -> ENTRY APPROVED`);
+            } else {
+                console.log(`${attendee.name} -> ENTRY DENIED`);
+            }
+        }
+        break;
+
+    case 3:
+        console.log("\nVIP GUESTS");
+
+        for (let attendee of attendees) {
+
+            if (
+                attendee.ticket === "VIP" &&
+                attendee.hasTicket &&
+                attendee.age >= 18
+            ) {
+                console.log(attendee.name);
+            }
+        }
+        break;
+
+    case 4:
+        console.log("\nDENIED ATTENDEES");
+
+        for (let attendee of attendees) {
+
+            if (!(attendee.age >= 18 && attendee.hasTicket)) {
+
+                if (attendee.age < 18) {
+                    console.log(`${attendee.name} -> UNDER 18`);
+                } else {
+                    console.log(`${attendee.name} -> NO VALID TICKET`);
+                }
+            }
+        }
+        break;
+
+    case 5:
+        console.log("\nFESTIVAL STATISTICS");
+        console.log(`Total Attendees: ${attendees.length}`);
+        console.log(`Valid Tickets: ${validTickets}`);
+        console.log(`Invalid Tickets: ${invalidTickets}`);
+        console.log(`Under 18: ${under18}`);
+        console.log(`VIP Tickets: ${vipCount}`);
+        console.log(`General Tickets: ${generalCount}`);
+        console.log(`Total Spend: R${totalSpend}`);
+        break;
+
+    case 6:
+        console.log("\nBIGGEST SPENDER");
+        console.log(
+            `${biggestSpender.name} spent R${biggestSpender.spend}`
+        );
+        break;
+
+    case 7:
+        console.log("\nFESTIVAL CLOSED");
+        break;
+
+    default:
+        console.log("INVALID OPTION");
+}

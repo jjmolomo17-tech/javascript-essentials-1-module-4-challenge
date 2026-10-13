@@ -128,3 +128,57 @@ Display a countdown timer
 Operate the festival dashboard
 
 The system is designed to automatically adapt if attendees are added, removed, or modified in the dataset.
+
+## Submission Questions
+
+1. Why did you use && for festival entry?
+
+I used the && (AND) operator because more than one condition must be true before a person can enter the festival. The attendee must be at least 18 years old and must have a valid ticket. Using && ensures that entry is approved only when both conditions are satisfied.
+
+2. Where did you use else if and why?
+
+I used else if in Challenge 2 and Challenge 7.
+
+In Challenge 2, else if checks whether an attendee is under 18 after checking the entry requirements.
+
+In Challenge 7, else if is used to determine which food voucher a customer receives based on spending ranges. This allows only one reward category to be assigned.
+
+3. Why is switch appropriate for the control menu?
+
+A switch statement is appropriate because the dashboard has multiple fixed options. Each menu number corresponds to a specific operation. Using switch makes the code easier to read and maintain compared to using many if...else statements.
+
+4. What is the difference between break in your search and continue in the security check?
+
+break completely stops the loop when the required attendee has been found. There is no need to continue searching after the match is found.
+
+continue skips only the current iteration and moves to the next attendee. In the security check, attendees without valid tickets are skipped, but the rest of the queue still needs to be processed.
+
+5. How did you determine the biggest spender?
+
+I started by assuming the first attendee was the biggest spender.
+
+
+let biggestSpender = attendees[0];
+
+I then looped through all attendees and compared each spending amount with the current highest amount. If a higher amount was found, that attendee became the new biggest spender. This means the answer updates automatically if the data changes.
+
+6. How did you prevent the venue from exceeding capacity?
+
+I used a peopleInside counter that increases each time an attendee is successfully admitted. When the counter reaches the venue capacity, the program displays "VENUE FULL" and uses break to stop processing additional attendees.
+
+7. What would happen if another 20 attendees were added to the array?
+
+The program would continue working correctly because all processing is done using loops. Every challenge automatically processes all attendees in the array. New attendees would automatically be included in:
+
+Entry checks
+VIP checks
+Voucher calculations
+Statistics
+Biggest spender calculations
+Venue capacity checks
+
+No code changes would be required.
+
+8. Which part of the project required the most problem-solving?
+
+The Festival Statistics challenge required the most problem-solving because multiple values had to be calculated at the same time. While looping through the array, the program needed to track ticket counts, spending totals, average spending, age-related statistics, and other calculations accurately.
