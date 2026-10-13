@@ -201,9 +201,9 @@ console.log(`General Tickets: ${generalCount}`);
 console.log(`Total Spend: R${totalSpend}`);
 console.log(`Average Spend: R${averageSpend.toFixed(2)}`);
 
-// =====================================================
+// ====================================================
 // CHALLENGE 9 - BIGGEST SPENDER
-// =====================================================
+// ====================================================
 
 console.log("\n===== CHALLENGE 9: BIGGEST SPENDER =====");
 
