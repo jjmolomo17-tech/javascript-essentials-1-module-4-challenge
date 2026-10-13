@@ -72,9 +72,9 @@ for (let attendee of attendees) {
     console.log(`${attendee.name} - Wristband: ${wristband}`);
 }
 
-// =====================================================
+// ====================================================
 // CHALLENGE 4 - VIP LOUNGE SECURITY
-// =====================================================
+// ====================================================
 
 console.log("\n===== CHALLENGE 4: VIP LOUNGE SECURITY =====");
 
